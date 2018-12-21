@@ -3,4 +3,5 @@
 .gitignore
 vsc-extension-quickstart.md
 hubl_snippets_gen.py
+hublSnippetsGen.js
 LICENSE
