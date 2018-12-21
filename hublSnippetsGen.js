@@ -58,6 +58,6 @@ fetchData('https://api.hubspot.com/cos-rendering/v1/hubldoc')
           : `~${childEntry.name}`
       })
     })
-    Object.keys(output).forEach((type) => {writePrettySnippetJson(`hubl_${type}`, JSON.stringify(output[type]))})
+    Object.keys(output).forEach((type) => {writePrettySnippetJson(`hubl_${type}`, JSON.stringify(output[type], null, 4))})
   })
   .catch((err) => console.log(err));
