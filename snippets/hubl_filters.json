@@ -2,481 +2,481 @@
     "abs": {
         "name": "abs",
         "body": "abs(${number})",
-        "description": "Return the absolute value of the argument.",
+        "description": "Return the absolute value of the argument.\n Available Parameters: \n\t- number(number): The number that you want to get the absolute value of",
         "prefix": "|abs"
     },
     "add": {
         "name": "add",
         "body": "add(${number}, ${addend})",
-        "description": "adds a number to the existing value",
+        "description": "adds a number to the existing value\n Available Parameters: \n\t- number(number): Number or numeric variable to add to\n\n\t- addend(number): The number added to the base number",
         "prefix": "|add"
     },
     "attr": {
         "name": "attr",
         "body": "attr(${obj}, ${name})",
-        "description": "Renders the attribute of a dictionary",
+        "description": "Renders the attribute of a dictionary\n Available Parameters: \n\t- obj(String): The dictionary containing the attribute\n\n\t- name(String): The dictionary attribute name to access",
         "prefix": "|attr"
     },
     "batch": {
         "name": "batch",
         "body": "{% batch \"batch\" (${value}, ${linecount}, ${fill_with}) %}\n\t\n\n{% endbatch%} ",
-        "description": "A filter that groups up items within a sequence",
+        "description": "A filter that groups up items within a sequence\n Available Parameters: \n\t- value(String): The sequence or dict that the filter is applied to\n\n\t- linecount(number): Number of items to include in the batch\n\n\t- fill_with(String): Value used to fill up missing items",
         "prefix": "|batch"
     },
     "between_times": {
         "name": "between_times",
         "body": "between_times(${begin}, ${end}, ${unit})",
-        "description": "Calculates the time between two datetime objects",
+        "description": "Calculates the time between two datetime objects\n Available Parameters: \n\t- begin(String): Datetime object or timestamp at the beginning of the period\n\n\t- end(String): Datetime object or timestamp at the end of the period\n\n\t- unit(String): Which temporal unit to use",
         "prefix": "|between_times"
     },
     "bool": {
         "name": "bool",
         "body": "{% bool \"bool\" (${value}) %}\n\t\n\n{% endbool%} ",
-        "description": "Convert value into a boolean.",
+        "description": "Convert value into a boolean.\n Available Parameters: \n\t- value(String): The value to convert to a boolean",
         "prefix": "|bool"
     },
     "capitalize": {
         "name": "capitalize",
         "body": "capitalize(${string})",
-        "description": "Capitalize a value. The first character will be uppercase, all others lowercase.",
+        "description": "Capitalize a value. The first character will be uppercase, all others lowercase.\n Available Parameters: \n\t- string(String): String to capitalize the first letter of",
         "prefix": "|capitalize"
     },
     "center": {
         "name": "center",
         "body": "center(${value}, ${width})",
-        "description": "Uses whitespace to center the value in a field of a given width.",
+        "description": "Uses whitespace to center the value in a field of a given width.\n Available Parameters: \n\t- value(String): Value to center\n\n\t- width(number): Width of field to center value in",
         "prefix": "|center"
     },
     "convert_rgb": {
         "name": "convert_rgb",
         "body": "convert_rgb",
-        "description": "Converts a color given as a hex string into a comma-separated list of RGB values.",
+        "description": "Converts a color given as a hex string into a comma-separated list of RGB values.\n(no documented parameters)",
         "prefix": "|convert_rgb"
     },
     "count": {
         "name": "count",
         "body": "count",
-        "description": "",
+        "description": "\n(no documented parameters)",
         "prefix": "|count"
     },
     "cut": {
         "name": "cut",
         "body": "cut(${value}, ${to_remove})",
-        "description": "Removes a string from the value from another string",
+        "description": "Removes a string from the value from another string\n Available Parameters: \n\t- value(String): The original string\n\n\t- to_remove(String): String to remove from the original string",
         "prefix": "|cut"
     },
     "d": {
         "name": "d",
         "body": "d",
-        "description": "",
+        "description": "\n(no documented parameters)",
         "prefix": "|d"
     },
     "date": {
         "name": "date",
         "body": "date",
-        "description": "",
+        "description": "\n(no documented parameters)",
         "prefix": "|date"
     },
     "datetimeformat": {
         "name": "datetimeformat",
         "body": "datetimeformat(${value}, ${format}, ${timezone})",
-        "description": "Formats a date object",
+        "description": "Formats a date object\n Available Parameters: \n\t- value(String): The date variable or UNIX timestamp to format\n\n\t- format(String): The format of the date determined by the directives added to this parameter\n\n\t- timezone(String): Time zone of output date",
         "prefix": "|datetimeformat"
     },
     "default": {
         "name": "default",
         "body": "default(${value}, ${default_value}, ${boolean})",
-        "description": "If the value is undefined it will return the passed default value, otherwise the value of the variable",
+        "description": "If the value is undefined it will return the passed default value, otherwise the value of the variable\n Available Parameters: \n\t- value(String): The variable or value to test\n\n\t- default_value(String): Value to print when variable is not defined\n\n\t- boolean(boolean): Set to True to use with variables which evaluate to false",
         "prefix": "|default"
     },
     "dictsort": {
         "name": "dictsort",
         "body": "{% dictsort \"dictsort\" (${value}, ${case_sensitive}, ${by}) %}\n\t\n\n{% enddictsort%} ",
-        "description": "Sort a dict and yield (key, value) pairs.",
+        "description": "Sort a dict and yield (key, value) pairs.\n Available Parameters: \n\t- value(String): Dict to sort\n\n\t- case_sensitive(boolean): Determines whether or not the sorting is case sensitive\n\n\t- by(enum key|value): Sort by dict key or value",
         "prefix": "|dictsort"
     },
     "difference": {
         "name": "difference",
         "body": "difference(${value}, ${list})",
-        "description": "Returns a list containing elements present in the first list but not the second list",
+        "description": "Returns a list containing elements present in the first list but not the second list\n Available Parameters: \n\t- value(sequence): The first list\n\n\t- list(sequence): The second list",
         "prefix": "|difference"
     },
     "divide": {
         "name": "divide",
         "body": "divide(${value}, ${divisor})",
-        "description": "Divides the current value by a divisor",
+        "description": "Divides the current value by a divisor\n Available Parameters: \n\t- value(number): The numerator to be divided\n\n\t- divisor(number): The divisor to divide the value",
         "prefix": "|divide"
     },
     "divisible": {
         "name": "divisible",
         "body": "{% divisible \"divisible\" (${value}, ${divisor}) %}\n\t\n\n{% enddivisible%} ",
-        "description": "Evaluates to true if the value is divisible by the given number",
+        "description": "Evaluates to true if the value is divisible by the given number\n Available Parameters: \n\t- value(number): The value to be divided\n\n\t- divisor(number): The divisor to check if the value is divisible by",
         "prefix": "|divisible"
     },
     "e": {
         "name": "e",
         "body": "e",
-        "description": "",
+        "description": "\n(no documented parameters)",
         "prefix": "|e"
     },
     "escape": {
         "name": "escape",
         "body": "escape(${s})",
-        "description": "Converts the characters &, <, >, ‘, and ” in string s to HTML-safe sequences. Use this filter if you need to display text that might contain such characters in HTML. Marks return value as markup string.",
+        "description": "Converts the characters &, <, >, ‘, and ” in string s to HTML-safe sequences. Use this filter if you need to display text that might contain such characters in HTML. Marks return value as markup string.\n Available Parameters: \n\t- s(String): String to escape",
         "prefix": "|escape"
     },
     "escape_jinjava": {
         "name": "escape_jinjava",
         "body": "escape_jinjava(${s})",
-        "description": "Converts the characters { and } in string s to Jinjava-safe sequences. Use this filter if you need to display text that might contain such characters in Jinjava. Marks return value as markup string.",
+        "description": "Converts the characters { and } in string s to Jinjava-safe sequences. Use this filter if you need to display text that might contain such characters in Jinjava. Marks return value as markup string.\n Available Parameters: \n\t- s(String): String to escape",
         "prefix": "|escape_jinjava"
     },
     "escapejs": {
         "name": "escapejs",
         "body": "escapejs(${s})",
-        "description": "Escapes strings so that they can be safely inserted into a JavaScript variable declaration",
+        "description": "Escapes strings so that they can be safely inserted into a JavaScript variable declaration\n Available Parameters: \n\t- s(String): String to escape",
         "prefix": "|escapejs"
     },
     "escapejson": {
         "name": "escapejson",
         "body": "escapejson(${s})",
-        "description": "Escapes strings so that they can be used as JSON values",
+        "description": "Escapes strings so that they can be used as JSON values\n Available Parameters: \n\t- s(String): String to escape",
         "prefix": "|escapejson"
     },
     "filesizeformat": {
         "name": "filesizeformat",
         "body": "filesizeformat(${value}, ${binary})",
-        "description": "Format the value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc).",
+        "description": "Format the value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc).\n Available Parameters: \n\t- value(String): The value to convert to filesize format\n\n\t- binary(boolean): Use binary prefixes (Mebi, Gibi)",
         "prefix": "|filesizeformat"
     },
     "first": {
         "name": "first",
         "body": "first(${seq})",
-        "description": "Return the first item of a sequence.",
+        "description": "Return the first item of a sequence.\n Available Parameters: \n\t- seq(sequence): Sequence to return first item from",
         "prefix": "|first"
     },
     "float": {
         "name": "float",
         "body": "float(${value}, ${default})",
-        "description": "Convert the value into a floating point number.",
+        "description": "Convert the value into a floating point number.\n Available Parameters: \n\t- value(String): Value to convert to a float\n\n\t- default(float): Value to return if conversion fails",
         "prefix": "|float"
     },
     "forceescape": {
         "name": "forceescape",
         "body": "forceescape(${value})",
-        "description": "Enforce HTML escaping. This will probably double escape variables.",
+        "description": "Enforce HTML escaping. This will probably double escape variables.\n Available Parameters: \n\t- value(String): Value to escape",
         "prefix": "|forceescape"
     },
     "format": {
         "name": "format",
         "body": "format(${value}, ${args})",
-        "description": "Apply Python string formatting to an object.",
+        "description": "Apply Python string formatting to an object.\n Available Parameters: \n\t- value(String): String value to reformat\n\n\t- args(String...): Values to insert into string",
         "prefix": "|format"
     },
     "fromjson": {
         "name": "fromjson",
         "body": "fromjson(${s})",
-        "description": "Converts JSON string to Object",
+        "description": "Converts JSON string to Object\n Available Parameters: \n\t- s(String): JSON String to write to object",
         "prefix": "|fromjson"
     },
     "geo_distance": {
         "name": "geo_distance",
         "body": "geo_distance(${point1}, ${point2_lat}, ${point2_long}, ${units})",
-        "description": "Calculates the ellipsoidal 2D distance between two points on Earth",
+        "description": "Calculates the ellipsoidal 2D distance between two points on Earth\n Available Parameters: \n\t- point1(location): location from a HubDB column\n\n\t- point2_lat(number): latitude of point2\n\n\t- point2_long(number): longitude of point2\n\n\t- units(string): Units for the return value. Options are FT for feet, MI for miles, M for meters or KM for kilometers",
         "prefix": "|geo_distance"
     },
     "groupby": {
         "name": "groupby",
         "body": "{% groupby \"groupby\" (${value}, ${attribute}) %}\n\t\n\n{% endgroupby%} ",
-        "description": "Group a sequence of objects by a common attribute.",
+        "description": "Group a sequence of objects by a common attribute.\n Available Parameters: \n\t- value(String): The dict to iterate through and group by a common attribute\n\n\t- attribute(String): The common attribute to group by",
         "prefix": "|groupby"
     },
     "indent": {
         "name": "indent",
         "body": "indent(${s}, ${width}, ${indentfirst})",
-        "description": "Uses whitespace to indent a string.",
+        "description": "Uses whitespace to indent a string.\n Available Parameters: \n\t- s(String): The string to indent\n\n\t- width(number): Amount of whitespace to indent\n\n\t- indentfirst(boolean): If True, first line will be indented",
         "prefix": "|indent"
     },
     "int": {
         "name": "int",
         "body": "int(${value}, ${default})",
-        "description": "Convert the value into an integer.",
+        "description": "Convert the value into an integer.\n Available Parameters: \n\t- value(String): The value to convert to an integer\n\n\t- default(number): Value to return if the conversion fails",
         "prefix": "|int"
     },
     "intersect": {
         "name": "intersect",
         "body": "intersect(${value}, ${list})",
-        "description": "Returns a list containing elements present in both lists",
+        "description": "Returns a list containing elements present in both lists\n Available Parameters: \n\t- value(sequence): The first list\n\n\t- list(sequence): The second list",
         "prefix": "|intersect"
     },
     "ipaddr": {
         "name": "ipaddr",
         "body": "{% ipaddr \"ipaddr\" (${value}, ${function}) %}\n\t\n\n{% endipaddr%} ",
-        "description": "Evaluates to true if the value is a valid IPv4 or IPv6 address",
+        "description": "Evaluates to true if the value is a valid IPv4 or IPv6 address\n Available Parameters: \n\t- value(string): String to check IP Address\n\n\t- function(string): Optional name of function. Supported functions: 'prefix'",
         "prefix": "|ipaddr"
     },
     "join": {
         "name": "join",
         "body": "join(${value}, ${d}, ${attr})",
-        "description": "Return a string which is the concatenation of the strings in the sequence.",
+        "description": "Return a string which is the concatenation of the strings in the sequence.\n Available Parameters: \n\t- value(String): The values to join\n\n\t- d(String): The separator string used to join the items\n\n\t- attr(String): Optional dict object attribute to use in joining",
         "prefix": "|join"
     },
     "last": {
         "name": "last",
         "body": "last(${seq})",
-        "description": "Return the last item of a sequence",
+        "description": "Return the last item of a sequence\n Available Parameters: \n\t- seq(sequence): Sequence to return last item from",
         "prefix": "|last"
     },
     "length": {
         "name": "length",
         "body": "length(${object})",
-        "description": "Return the number of items of a sequence or mapping",
+        "description": "Return the number of items of a sequence or mapping\n Available Parameters: \n\t- object(String): The sequence to count",
         "prefix": "|length"
     },
     "list": {
         "name": "list",
         "body": "list(${value})",
-        "description": "Convert the value into a list. If it was a string the returned list will be a list of characters.",
+        "description": "Convert the value into a list. If it was a string the returned list will be a list of characters.\n Available Parameters: \n\t- value(String): Value to add to a sequence",
         "prefix": "|list"
     },
     "lower": {
         "name": "lower",
         "body": "lower(${s})",
-        "description": "Convert a value to lowercase",
+        "description": "Convert a value to lowercase\n Available Parameters: \n\t- s(String): String to make lowercase",
         "prefix": "|lower"
     },
     "map": {
         "name": "map",
         "body": "map(${value}, ${attribute})",
-        "description": "Applies a filter on a sequence of objects or looks up an attribute.",
+        "description": "Applies a filter on a sequence of objects or looks up an attribute.\n Available Parameters: \n\t- value(object): Sequence to apply filter or dict to lookup attribute\n\n\t- attribute(String): Filter to apply to an object or dict attribute to lookup",
         "prefix": "|map"
     },
     "md5": {
         "name": "md5",
         "body": "md5(${value})",
-        "description": "Calculates the md5 hash of the given object",
+        "description": "Calculates the md5 hash of the given object\n Available Parameters: \n\t- value(String): Value to get MD5 hash of",
         "prefix": "|md5"
     },
     "minus_time": {
         "name": "minus_time",
         "body": "minus_time(${var}, ${diff}, ${unit})",
-        "description": "Subtracts a specified amount of time to a datetime object",
+        "description": "Subtracts a specified amount of time to a datetime object\n Available Parameters: \n\t- var(String): Datetime object or timestamp\n\n\t- diff(String): The amount to subtract from the datetime\n\n\t- unit(String): Which temporal unit to use",
         "prefix": "|minus_time"
     },
     "multiply": {
         "name": "multiply",
         "body": "multiply(${value}, ${multiplier})",
-        "description": "Multiplies the current object with the given multiplier",
+        "description": "Multiplies the current object with the given multiplier\n Available Parameters: \n\t- value(number): Base number to be multiplied\n\n\t- multiplier(number): The multiplier",
         "prefix": "|multiply"
     },
     "plus_time": {
         "name": "plus_time",
         "body": "plus_time(${var}, ${diff}, ${unit})",
-        "description": "Adds a specified amount of time to a datetime object",
+        "description": "Adds a specified amount of time to a datetime object\n Available Parameters: \n\t- var(String): Datetime object or timestamp\n\n\t- diff(String): The amount to add to the datetime\n\n\t- unit(String): Which temporal unit to use",
         "prefix": "|plus_time"
     },
     "pprint": {
         "name": "pprint",
         "body": "pprint(${value})",
-        "description": "Pretty print a variable. Useful for debugging.",
+        "description": "Pretty print a variable. Useful for debugging.\n Available Parameters: \n\t- value(object): Object to Pretty Print",
         "prefix": "|pprint"
     },
     "random": {
         "name": "random",
         "body": "{% random \"random\" (${seq}) %}\n\t\n\n{% endrandom%} ",
-        "description": "Return a random item from the sequence.",
+        "description": "Return a random item from the sequence.\n Available Parameters: \n\t- seq(sequence): Sequence to return a random item from",
         "prefix": "|random"
     },
     "regex_replace": {
         "name": "regex_replace",
         "body": "regex_replace(${s}, ${regex}, ${new})",
-        "description": "Return a copy of the value with all occurrences of a matched regular expression (Java RE2 syntax) replaced with a new one. The first argument is the regular expression to be matched, the second is the replacement string",
+        "description": "Return a copy of the value with all occurrences of a matched regular expression (Java RE2 syntax) replaced with a new one. The first argument is the regular expression to be matched, the second is the replacement string\n Available Parameters: \n\t- s(String): Base string to find and replace within\n\n\t- regex(String): The regular expression that you want to match and replace\n\n\t- new(String): The new string that you replace the matched substring",
         "prefix": "|regex_replace"
     },
     "reject": {
         "name": "reject",
         "body": "reject(${seq}, ${exp_test})",
-        "description": "Filters a sequence of objects by applying a test to the object and rejecting the ones with the test succeeding.",
+        "description": "Filters a sequence of objects by applying a test to the object and rejecting the ones with the test succeeding.\n Available Parameters: \n\t- seq(Sequence to test): \n\n\t- exp_test(name of expression test): Specify which expression test to run for making the selection",
         "prefix": "|reject"
     },
     "rejectattr": {
         "name": "rejectattr",
         "body": "{% rejectattr \"rejectattr\" (${seq}, ${attribute}, ${exp_test}) %}\n\t\n\n{% endrejectattr%} ",
-        "description": "Filters a sequence of objects by applying a test to an attribute of an object or the attribute and rejecting the ones with the test succeeding.",
+        "description": "Filters a sequence of objects by applying a test to an attribute of an object or the attribute and rejecting the ones with the test succeeding.\n Available Parameters: \n\t- seq(sequence): Sequence to test\n\n\t- attribute(String): Attribute to test for and reject items that contain it\n\n\t- exp_test(name of expression test): Specify which expression test to run for making the rejection",
         "prefix": "|rejectattr"
     },
     "replace": {
         "name": "replace",
         "body": "replace(${s}, ${old}, ${new}, ${count})",
-        "description": "Return a copy of the value with all occurrences of a substring replaced with a new one. The first argument is the substring that should be replaced, the second is the replacement string. If the optional third argument count is given, only the first count occurrences are replaced",
+        "description": "Return a copy of the value with all occurrences of a substring replaced with a new one. The first argument is the substring that should be replaced, the second is the replacement string. If the optional third argument count is given, only the first count occurrences are replaced\n Available Parameters: \n\t- s(String): Base string to find and replace within\n\n\t- old(String): The old substring that you want to match and replace\n\n\t- new(String): The new string that you replace the matched substring\n\n\t- count(number): Replace only the first N occurrences",
         "prefix": "|replace"
     },
     "reverse": {
         "name": "reverse",
         "body": "{% reverse \"reverse\" (${value}) %}\n\t\n\n{% endreverse%} ",
-        "description": "Reverse the object or return an iterator the iterates over it the other way round.",
+        "description": "Reverse the object or return an iterator the iterates over it the other way round.\n Available Parameters: \n\t- value(object): The sequence or dict to reverse the iteration order",
         "prefix": "|reverse"
     },
     "round": {
         "name": "round",
         "body": "round(${value}, ${precision}, ${method})",
-        "description": "Round the number to a given precision.",
+        "description": "Round the number to a given precision.\n Available Parameters: \n\t- value(number): The number to round\n\n\t- precision(number): Specifies the precision of rounding\n\n\t- method(enum common|ceil|floor): Method of rounding: 'common' rounds either up or down, 'ceil' always rounds up, and 'floor' always rounds down.",
         "prefix": "|round"
     },
     "safe": {
         "name": "safe",
         "body": "safefalse",
-        "description": "Mark the value as safe, which means that in an environment with automatic escaping enabled this variable will not be escaped.",
+        "description": "Mark the value as safe, which means that in an environment with automatic escaping enabled this variable will not be escaped.\n(no documented parameters)",
         "prefix": "|safe"
     },
     "select": {
         "name": "select",
         "body": "select(${value}, ${exp_test})",
-        "description": "Filters a sequence of objects by applying a test to the object and only selecting the ones with the test succeeding.",
+        "description": "Filters a sequence of objects by applying a test to the object and only selecting the ones with the test succeeding.\n Available Parameters: \n\t- value(sequence): \n\n\t- exp_test(name of expression test): Specify which expression test to run for making the selection",
         "prefix": "|select"
     },
     "selectattr": {
         "name": "selectattr",
         "body": "{% selectattr \"selectattr\" (${sequence}, ${attr}, ${exp_test}) %}\n\t\n\n{% endselectattr%} ",
-        "description": "Filters a sequence of objects by applying a test to an attribute of an object and only selecting the ones with the test succeeding.",
+        "description": "Filters a sequence of objects by applying a test to an attribute of an object and only selecting the ones with the test succeeding.\n Available Parameters: \n\t- sequence(sequence): Sequence to test\n\n\t- attr(String): Attribute to test for and select items that contain it\n\n\t- exp_test(name of expression test): Specify which expression test to run for making the selection",
         "prefix": "|selectattr"
     },
     "shuffle": {
         "name": "shuffle",
         "body": "{% shuffle \"shuffle\" false %}\n\t\n\n{% endshuffle%} ",
-        "description": "Randomly shuffle a given list, returning a new list with all of the items of the original list in a random order",
+        "description": "Randomly shuffle a given list, returning a new list with all of the items of the original list in a random order\n(no documented parameters)",
         "prefix": "|shuffle"
     },
     "slice": {
         "name": "slice",
         "body": "{% slice \"slice\" (${value}, ${slices}, ${fill_with}) %}\n\t\n\n{% endslice%} ",
-        "description": "Slice an iterator and return a list of lists containing those items.",
+        "description": "Slice an iterator and return a list of lists containing those items.\n Available Parameters: \n\t- value(sequence): The sequence or dict that the filter is applied to\n\n\t- slices(number): Specifies how many items will be sliced\n\n\t- fill_with(String): Used to fill missing values on the last iteration",
         "prefix": "|slice"
     },
     "sort": {
         "name": "sort",
         "body": "{% sort \"sort\" (${value}, ${reverse}, ${case_sensitive}, ${attribute}) %}\n\t\n\n{% endsort%} ",
-        "description": "Sort an iterable.",
+        "description": "Sort an iterable.\n Available Parameters: \n\t- value(iterable): The sequence or dict to sort through iteration\n\n\t- reverse(boolean): Boolean to reverse the sort order\n\n\t- case_sensitive(boolean): Determines whether or not the sorting is case sensitive\n\n\t- attribute(String): Specifies an attribute to sort by",
         "prefix": "|sort"
     },
     "split": {
         "name": "split",
         "body": "{% split \"split\" (${s}, ${separator}, ${limit}) %}\n\t\n\n{% endsplit%} ",
-        "description": "Splits the input string into a list on the given separator",
+        "description": "Splits the input string into a list on the given separator\n Available Parameters: \n\t- s(String): The string to split\n\n\t- separator(String): Specifies the separator to split the variable by\n\n\t- limit(number): Limits resulting list by putting remainder of string into last list item",
         "prefix": "|split"
     },
     "string": {
         "name": "string",
         "body": "stringfalse",
-        "description": "Returns string value of object",
+        "description": "Returns string value of object\n(no documented parameters)",
         "prefix": "|string"
     },
     "striptags": {
         "name": "striptags",
         "body": "striptagsfalse",
-        "description": "Strip SGML/XML tags and replace adjacent whitespace by one space.",
+        "description": "Strip SGML/XML tags and replace adjacent whitespace by one space.\n(no documented parameters)",
         "prefix": "|striptags"
     },
     "strtotime": {
         "name": "strtotime",
         "body": "strtotime(${datetimeString}, ${datetimeFormat})",
-        "description": "Converts a datetime string and datetime format to a datetime object",
+        "description": "Converts a datetime string and datetime format to a datetime object\n Available Parameters: \n\t- datetimeString(String): Datetime string\n\n\t- datetimeFormat(String): Format of the datetime string",
         "prefix": "|strtotime"
     },
     "sum": {
         "name": "sum",
         "body": "sum(${value}, ${attribute}, ${start})",
-        "description": "Returns the sum of a sequence of numbers plus the value of parameter ‘start’ (which defaults to 0). When the sequence is empty it returns start.",
+        "description": "Returns the sum of a sequence of numbers plus the value of parameter ‘start’ (which defaults to 0). When the sequence is empty it returns start.\n Available Parameters: \n\t- value(iterable): Selects the sequence or dict to sum values from\n\n\t- attribute(String): Specify an optional attribute of dict to sum\n\n\t- start(number): Sets a value to return, if there is nothing in the variable to sum",
         "prefix": "|sum"
     },
     "symmetric_difference": {
         "name": "symmetric_difference",
         "body": "symmetric_difference(${value}, ${list})",
-        "description": "Returns a list containing elements present in only one list.",
+        "description": "Returns a list containing elements present in only one list.\n Available Parameters: \n\t- value(sequence): The first list\n\n\t- list(sequence): The second list",
         "prefix": "|symmetric_difference"
     },
     "title": {
         "name": "title",
         "body": "titlefalse",
-        "description": "Return a titlecased version of the value. I.e. words will start with uppercase letters, all remaining characters are lowercase.",
+        "description": "Return a titlecased version of the value. I.e. words will start with uppercase letters, all remaining characters are lowercase.\n(no documented parameters)",
         "prefix": "|title"
     },
     "tojson": {
         "name": "tojson",
         "body": "tojson(${o})",
-        "description": "Writes object as a JSON string",
+        "description": "Writes object as a JSON string\n Available Parameters: \n\t- o(String): Object to write to JSON",
         "prefix": "|tojson"
     },
     "trim": {
         "name": "trim",
         "body": "trimfalse",
-        "description": "Strip leading and trailing whitespace.",
+        "description": "Strip leading and trailing whitespace.\n(no documented parameters)",
         "prefix": "|trim"
     },
     "truncate": {
         "name": "truncate",
         "body": "truncate(${s}, ${length}, ${killwords}, ${end})",
-        "description": "Return a truncated copy of the string. The length is specified with the first parameter which defaults to 255. If the second parameter is true the filter will cut the text at length. Otherwise it will discard the last word. If the text was in fact truncated it will append an ellipsis sign (\"...\"). If you want a different ellipsis sign than \"...\" you can specify it using the third parameter.",
+        "description": "Return a truncated copy of the string. The length is specified with the first parameter which defaults to 255. If the second parameter is true the filter will cut the text at length. Otherwise it will discard the last word. If the text was in fact truncated it will append an ellipsis sign (\"...\"). If you want a different ellipsis sign than \"...\" you can specify it using the third parameter.\n Available Parameters: \n\t- s(String): The string to truncate\n\n\t- length(number): Specifies the length at which to truncate the text (includes HTML characters)\n\n\t- killwords(boolean): If true, the string will cut text at length\n\n\t- end(String): The characters that will be added to indicate where the text was truncated",
         "prefix": "|truncate"
     },
     "truncatehtml": {
         "name": "truncatehtml",
         "body": "truncatehtml(${html}, ${length}, ${end}, ${breakword})",
-        "description": "Truncates a given string, respecting html markup (i.e. will properly close all nested tags)",
+        "description": "Truncates a given string, respecting html markup (i.e. will properly close all nested tags)\n Available Parameters: \n\t- html(String): HTML to truncate\n\n\t- length(number): Length at which to truncate text (HTML characters not included)\n\n\t- end(String): The characters that will be added to indicate where the text was truncated\n\n\t- breakword(boolean): If set to true, text will be truncated in the middle of words",
         "prefix": "|truncatehtml"
     },
     "union": {
         "name": "union",
         "body": "union(${value}, ${list})",
-        "description": "Returns a list containing elements present in either list",
+        "description": "Returns a list containing elements present in either list\n Available Parameters: \n\t- value(sequence): The first list\n\n\t- list(sequence): The second list",
         "prefix": "|union"
     },
     "unique": {
         "name": "unique",
         "body": "unique(${sequence}, ${attr})",
-        "description": "Extract a unique set from a sequence of objects",
+        "description": "Extract a unique set from a sequence of objects\n Available Parameters: \n\t- sequence(sequence): Sequence to filter\n\n\t- attr(Optional attribute on object to use as unique identifier): ",
         "prefix": "|unique"
     },
     "unixtimestamp": {
         "name": "unixtimestamp",
         "body": "unixtimestamp(${value})",
-        "description": "Gets the UNIX timestamp value (in milliseconds) of a date object",
+        "description": "Gets the UNIX timestamp value (in milliseconds) of a date object\n Available Parameters: \n\t- value(String): The date variable",
         "prefix": "|unixtimestamp"
     },
     "upper": {
         "name": "upper",
         "body": "upperfalse",
-        "description": "Convert a value to uppercase",
+        "description": "Convert a value to uppercase\n(no documented parameters)",
         "prefix": "|upper"
     },
     "urlencode": {
         "name": "urlencode",
         "body": "urlencodefalse",
-        "description": "Escape strings for use in URLs (uses UTF-8 encoding). It accepts both dictionaries and regular strings as well as pairwise iterables.",
+        "description": "Escape strings for use in URLs (uses UTF-8 encoding). It accepts both dictionaries and regular strings as well as pairwise iterables.\n(no documented parameters)",
         "prefix": "|urlencode"
     },
     "urlize": {
         "name": "urlize",
         "body": "urlize(${value}, ${trim_url_limit}, ${nofollow}, ${target})",
-        "description": "Converts URLs in plain text into clickable links.",
+        "description": "Converts URLs in plain text into clickable links.\n Available Parameters: \n\t- value(String): string URL to convert to an anchor\n\n\t- trim_url_limit(number): Sets a character limit\n\n\t- nofollow(boolean): Adds nofollow to generated link tag\n\n\t- target(String): Adds target attr to generated link tag",
         "prefix": "|urlize"
     },
     "wordcount": {
         "name": "wordcount",
         "body": "wordcountfalse",
-        "description": "Counts the words in the given string",
+        "description": "Counts the words in the given string\n(no documented parameters)",
         "prefix": "|wordcount"
     },
     "wordwrap": {
         "name": "wordwrap",
         "body": "wordwrap(${s}, ${width}, ${break_long_words})",
-        "description": "Return a copy of the string passed to the filter wrapped after 79 characters.",
+        "description": "Return a copy of the string passed to the filter wrapped after 79 characters.\n Available Parameters: \n\t- s(String): String to wrap after a certain number of chracters\n\n\t- width(number): Sets the width of spaces at which to wrap the text\n\n\t- break_long_words(boolean): If true, long words will be broken when wrapped",
         "prefix": "|wordwrap"
     },
     "xmlattr": {
         "name": "xmlattr",
         "body": "xmlattr(${d}, ${autospace})",
-        "description": "Create an HTML/XML attribute string based on the items in a dict.",
+        "description": "Create an HTML/XML attribute string based on the items in a dict.\n Available Parameters: \n\t- d(dict): Dict to filter\n\n\t- autospace(boolean): Automatically prepend a space in front of the item",
         "prefix": "|xmlattr"
     }
 }

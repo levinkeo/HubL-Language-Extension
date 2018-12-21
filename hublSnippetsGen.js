@@ -42,9 +42,18 @@ fetchData('https://api.hubspot.com/cos-rendering/v1/hubldoc')
         const childEntry = hubl[parentType][childType];
         const paramString = childEntry['params'].length > 0
           ? parentType === 'tags'
-            ? '\n\t' + childEntry.params.map(param => `${param.name}=${param.defaultValue}`).join("\n\t")
-            : `(${childEntry.params.map((param, i) => "${" + param.name + "}").join(", ")})`
+            ? '\n\t' + childEntry.params.map(param => `\${${param.name}}=\${${param.defaultValue.length
+                ? param.defaultValue
+                : 'NO_DEFAULT'}}`)
+            .join("\n\t")
+            : `(${childEntry.params.map((param, i) => "${" + param.name + "}")
+            .join(", ")})`
           : false;
+        const paramStringDesc = childEntry['params'].length > 0
+					? "\n Available Parameters: \n\t- " + childEntry.params
+						.map(param => `${param.name}(${param.type}): ${param.desc}`)
+						.join("\n\n\t- ")
+					: `\n(no documented parameters)`;
         output[parentType][childType] = {}; // I feel like I could use Object.assign() somewhere here to DRY this up.
         output[parentType][childType]['name'] = childEntry.name;
         output[parentType][childType]['body'] = childEntry.snippets.length > 0
@@ -52,7 +61,7 @@ fetchData('https://api.hubspot.com/cos-rendering/v1/hubldoc')
             ? endBlocker(childEntry.name, childEntry.name, paramString)
             : childEntry.name + paramString
           : childEntry.name
-        output[parentType][childType]['description'] = childEntry.desc;
+        output[parentType][childType]['description'] = childEntry.desc + paramStringDesc;
         output[parentType][childType]['prefix'] = parentType == 'filters'
           ? `|${childEntry.name}`
           : `~${childEntry.name}`

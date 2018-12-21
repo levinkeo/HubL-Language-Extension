@@ -2,331 +2,331 @@
     "blog_all_posts_url": {
         "name": "blog_all_posts_url",
         "body": "blog_all_posts_url(${selected_blog})",
-        "description": "Returns a full URL to the listing page for all blog posts for the specified blog",
+        "description": "Returns a full URL to the listing page for all blog posts for the specified blog\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use",
         "prefix": "~blog_all_posts_url"
     },
     "blog_author_url": {
         "name": "blog_author_url",
         "body": "blog_author_url(${selected_blog}, ${author_slug})",
-        "description": "Returns a full URL to the specified author's listing page for the specified blog",
+        "description": "Returns a full URL to the specified author's listing page for the specified blog\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- author_slug(author slug): Specifies which author to link to",
         "prefix": "~blog_author_url"
     },
     "blog_authors": {
         "name": "blog_authors",
         "body": "blog_authors(${selected_blog}, ${limit})",
-        "description": "Returns a sequence of blog author objects for the specified blog, sorted by slug ascending",
+        "description": "Returns a sequence of blog author objects for the specified blog, sorted by slug ascending\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- limit(numeric): Max authors to return",
         "prefix": "~blog_authors"
     },
     "blog_page_link": {
         "name": "blog_page_link",
         "body": "blog_page_link(${page})",
-        "description": "Returns the absolute url of the specified paginated listing page for the current blog",
+        "description": "Returns the absolute url of the specified paginated listing page for the current blog\n Available Parameters: \n\t- page(number): Required page number used to generate url",
         "prefix": "~blog_page_link"
     },
     "blog_popular_posts": {
         "name": "blog_popular_posts",
         "body": "blog_popular_posts(${selected_blog}, ${limit}, ${tag_slug})",
-        "description": "Returns a sequence of blog post objects for the specified blog, sorted by most popular first",
+        "description": "Returns a sequence of blog post objects for the specified blog, sorted by most popular first\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- limit(number): Specifies the number of posts to add to the sequence\n\n\t- tag_slug(tag slug): Optional tag to filter posts by",
         "prefix": "~blog_popular_posts"
     },
     "blog_post_archive_url": {
         "name": "blog_post_archive_url",
         "body": "blog_post_archive_url(${selected_blog}, ${year}, ${month}, ${day})",
-        "description": "Returns a full URL to the archive listing page for the given date values on the specified blog",
+        "description": "Returns a full URL to the archive listing page for the given date values on the specified blog\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- year(number): The year\n\n\t- month(number): The optional month\n\n\t- day(number): The optional day",
         "prefix": "~blog_post_archive_url"
     },
     "blog_post_by_id": {
         "name": "blog_post_by_id",
         "body": "blog_post_by_id(${blog_post_id})",
-        "description": "Returns a blog post by id",
+        "description": "Returns a blog post by id\n Available Parameters: \n\t- blog_post_id(id): The id of the blog post to look up",
         "prefix": "~blog_post_by_id"
     },
     "blog_recent_author_posts": {
         "name": "blog_recent_author_posts",
         "body": "blog_recent_author_posts(${selected_blog}, ${author_slug}, ${limit})",
-        "description": "Returns a sequence of blog post objects for the specified blog, by the specified author, sorted by most recent first",
+        "description": "Returns a sequence of blog post objects for the specified blog, by the specified author, sorted by most recent first\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- author_slug(author slug): Specifies which author to filter on\n\n\t- limit(number): Specifies the number of posts to add to the sequence",
         "prefix": "~blog_recent_author_posts"
     },
     "blog_recent_posts": {
         "name": "blog_recent_posts",
         "body": "blog_recent_posts(${selected_blog}, ${limit})",
-        "description": "Returns a sequence of blog post objects for the specified blog, sorted by most recent first",
+        "description": "Returns a sequence of blog post objects for the specified blog, sorted by most recent first\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- limit(number): Specifies the number of posts to add to the sequence, maximum 200.",
         "prefix": "~blog_recent_posts"
     },
     "blog_recent_tag_posts": {
         "name": "blog_recent_tag_posts",
         "body": "blog_recent_tag_posts(${selected_blog}, ${tag_slug}, ${limit})",
-        "description": "Returns a sequence of blog post objects for the specified blog, for the specified tag, sorted by most recent first",
+        "description": "Returns a sequence of blog post objects for the specified blog, for the specified tag, sorted by most recent first\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- tag_slug(tag slug): Specifies which tag to filter on\n\n\t- limit(number): Specifies the number of posts to add to the sequence",
         "prefix": "~blog_recent_tag_posts"
     },
     "blog_recent_topic_posts": {
         "name": "blog_recent_topic_posts",
         "body": "blog_recent_topic_posts(${selected_blog}, ${topic_slug}, ${limit})",
-        "description": "DEPRECATED -- see 'blog_recent_tag_posts'\nReturns a sequence of blog post objects for the specified blog, for the specified topic, sorted by most recent first",
+        "description": "DEPRECATED -- see 'blog_recent_tag_posts'\nReturns a sequence of blog post objects for the specified blog, for the specified topic, sorted by most recent first\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- topic_slug(topic slug): Specifies which topic to filter on\n\n\t- limit(number): Specifies the number of posts to add to the sequence",
         "prefix": "~blog_recent_topic_posts"
     },
     "blog_tag_url": {
         "name": "blog_tag_url",
         "body": "blog_tag_url(${selected_blog}, ${tag_slug})",
-        "description": "Returns a full URL to the specified tag's listing page for the specified blog",
+        "description": "Returns a full URL to the specified tag's listing page for the specified blog\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- tag_slug(tag slug): Specifies which tag to link to",
         "prefix": "~blog_tag_url"
     },
     "blog_tags": {
         "name": "blog_tags",
         "body": "blog_tags(${selected_blog}, ${limit})",
-        "description": "Returns a sequence of the 250 most blogged-about tags (based on number of associated blog posts) for the specified blog, sorted by blog post count",
+        "description": "Returns a sequence of the 250 most blogged-about tags (based on number of associated blog posts) for the specified blog, sorted by blog post count\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- limit(numeric): Max tags to return",
         "prefix": "~blog_tags"
     },
     "blog_topics": {
         "name": "blog_topics",
         "body": "blog_topics(${selected_blog}, ${limit})",
-        "description": "DEPRECATED -- see 'blog_tags'\nReturns a sequence of the 250 most blogged-about topics (based on number of associated blog posts) for the specified blog, sorted by blog post count",
+        "description": "DEPRECATED -- see 'blog_tags'\nReturns a sequence of the 250 most blogged-about topics (based on number of associated blog posts) for the specified blog, sorted by blog post count\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to use\n\n\t- limit(numeric): Max topics to return",
         "prefix": "~blog_topics"
     },
     "blog_total_post_count": {
         "name": "blog_total_post_count",
         "body": "blog_total_post_count(${selected_blog})",
-        "description": "Returns the total number of published posts in the specified blog",
+        "description": "Returns the total number of published posts in the specified blog\n Available Parameters: \n\t- selected_blog(blog id or 'default'): Specifies which blog to count",
         "prefix": "~blog_total_post_count"
     },
     "color_variant": {
         "name": "color_variant",
         "body": "color_variant(${base_color}, ${brightness_offset})",
-        "description": "Calculates a new hex color value based on a given input string var and multiplier",
+        "description": "Calculates a new hex color value based on a given input string var and multiplier\n Available Parameters: \n\t- base_color(hex color string (i.e. #fefefe)): The starting color to be altered\n\n\t- brightness_offset(number): A positive or negative number used to lighten or darken the base color",
         "prefix": "~color_variant"
     },
     "content_search": {
         "name": "content_search",
         "body": "content_search(${content_search_term})",
-        "description": "Returns results of searching across all of a portal's content for a specified term",
+        "description": "Returns results of searching across all of a portal's content for a specified term\n Available Parameters: \n\t- content_search_term(string): term to search for",
         "prefix": "~content_search"
     },
     "cta": {
         "name": "cta",
         "body": "cta(${guid}, ${align_opt})",
-        "description": "Renders a call to action embed tag",
+        "description": "Renders a call to action embed tag\n Available Parameters: \n\t- guid(String): The ID of the CTA to render\n\n\t- align_opt(enum justifyleft|justifycenter|justifyright|justifyfull): Adjusts alignment of CTA",
         "prefix": "~cta"
     },
     "datetimeformat": {
         "name": "datetimeformat",
         "body": "datetimeformat",
-        "description": "formats a date to a string",
+        "description": "formats a date to a string\n Available Parameters: \n\t- var(date): \n\n\t- format(String): \n\n\t- timezone(String): Time zone of output date",
         "prefix": "~datetimeformat"
     },
     "facebook_messenger_link": {
         "name": "facebook_messenger_link",
         "body": "facebook_messenger_linkfalse",
-        "description": "Returns an m.me link for facebook messenger",
+        "description": "Returns an m.me link for facebook messenger\n(no documented parameters)",
         "prefix": "~facebook_messenger_link"
     },
     "follow_me_links": {
         "name": "follow_me_links",
         "body": "follow_me_linksfalse",
-        "description": "Returns a list of configured follow me links for the portal",
+        "description": "Returns a list of configured follow me links for the portal\n(no documented parameters)",
         "prefix": "~follow_me_links"
     },
     "footer_js": {
         "name": "footer_js",
         "body": "footer_js",
-        "description": "Outputs all javascript enqueued for the head as html",
+        "description": "Outputs all javascript enqueued for the head as html\n(no documented parameters)",
         "prefix": "~footer_js"
     },
     "geo_distance": {
         "name": "geo_distance",
         "body": "geo_distance(${point1}, ${point2_lat}, ${point2_long}, ${units})",
-        "description": "Calculates the ellipsoidal 2D distance between two points on Earth",
+        "description": "Calculates the ellipsoidal 2D distance between two points on Earth\n Available Parameters: \n\t- point1(location): location from a HubDB column\n\n\t- point2_lat(number): latitude of point2\n\n\t- point2_long(number): longitude of point2\n\n\t- units(string): Units for the return value. Options are FT for feet, MI for miles, M for meters or KM for kilometers",
         "prefix": "~geo_distance"
     },
     "get_public_template_url": {
         "name": "get_public_template_url",
         "body": "get_public_template_url(${path})",
-        "description": "Returns URL to specified template by given path",
+        "description": "Returns URL to specified template by given path\n Available Parameters: \n\t- path(String): The Design Manager file path to the template or file",
         "prefix": "~get_public_template_url"
     },
     "get_public_template_url_by_id": {
         "name": "get_public_template_url_by_id",
         "body": "get_public_template_url_by_id(${template_id})",
-        "description": "Returns URL to specified template by id",
+        "description": "Returns URL to specified template by id\n Available Parameters: \n\t- template_id(number): The ID number of the template of file",
         "prefix": "~get_public_template_url_by_id"
     },
     "get_theme_style_setting": {
         "name": "get_theme_style_setting",
         "body": "get_theme_style_setting(${dot_notated_full_field_name}, ${unit})",
-        "description": "Returns theme overridden settings parameters or settings module parameters by dot notation",
+        "description": "Returns theme overridden settings parameters or settings module parameters by dot notation\n Available Parameters: \n\t- dot_notated_full_field_name(String): Fully qualified field name using dot notation\n\n\t- unit(String): Optional unit parameter",
         "prefix": "~get_theme_style_setting"
     },
     "head_css": {
         "name": "head_css",
         "body": "head_css",
-        "description": "Outputs all loaded css as html",
+        "description": "Outputs all loaded css as html\n(no documented parameters)",
         "prefix": "~head_css"
     },
     "head_js": {
         "name": "head_js",
         "body": "head_js",
-        "description": "Outputs all javascript enqueued for the head as html",
+        "description": "Outputs all javascript enqueued for the head as html\n(no documented parameters)",
         "prefix": "~head_js"
     },
     "hubdb_table": {
         "name": "hubdb_table",
         "body": "hubdb_table(${table_id})",
-        "description": "Returns information about a table",
+        "description": "Returns information about a table\n Available Parameters: \n\t- table_id(number): id of the table",
         "prefix": "~hubdb_table"
     },
     "hubdb_table_column": {
         "name": "hubdb_table_column",
         "body": "hubdb_table_column(${table_id}, ${column})",
-        "description": "Returns column information for specific column in a table",
+        "description": "Returns column information for specific column in a table\n Available Parameters: \n\t- table_id(number): id of the table\n\n\t- column(String): id or name of the column",
         "prefix": "~hubdb_table_column"
     },
     "hubdb_table_row": {
         "name": "hubdb_table_row",
         "body": "hubdb_table_row(${table_id}, ${row_id})",
-        "description": "Returns a row from a table by id",
+        "description": "Returns a row from a table by id\n Available Parameters: \n\t- table_id(number): id of the table\n\n\t- row_id(number): id of the row of the table",
         "prefix": "~hubdb_table_row"
     },
     "hubdb_table_rows": {
         "name": "hubdb_table_rows",
         "body": "hubdb_table_rows(${table_id}, ${query})",
-        "description": "Returns a sequence of data table rows based on the query",
+        "description": "Returns a sequence of data table rows based on the query\n Available Parameters: \n\t- table_id(number): id of the table to query\n\n\t- query(string): A query such in the same format as a URL query string. If not passed, returns all rows.",
         "prefix": "~hubdb_table_rows"
     },
     "i18n_getlanguage": {
         "name": "i18n_getlanguage",
         "body": "i18n_getlanguage",
-        "description": "Gets the language of the current page. Currently works only within modules.",
+        "description": "Gets the language of the current page. Currently works only within modules.\n(no documented parameters)",
         "prefix": "~i18n_getlanguage"
     },
     "i18n_getmessage": {
         "name": "i18n_getmessage",
         "body": "i18n_getmessage(${message_name}, ${substitutions})",
-        "description": "Gets the translated message for the language of the rendered page. Currently works only within modules.",
+        "description": "Gets the translated message for the language of the rendered page. Currently works only within modules.\n Available Parameters: \n\t- message_name(String): The name of the message to look up\n\n\t- substitutions(sequence of strings): numbered substitution values used in placeholder 'content' attributes",
         "prefix": "~i18n_getmessage"
     },
     "include_css": {
         "name": "include_css",
         "body": "include_css(${path})",
-        "description": "Generates stylesheet link tag for specified template path",
+        "description": "Generates stylesheet link tag for specified template path\n Available Parameters: \n\t- path(String): The Design Manager file path to the template or file",
         "prefix": "~include_css"
     },
     "include_default_custom_css": {
         "name": "include_default_custom_css",
         "body": "include_default_custom_cssfalse",
-        "description": "Generates stylesheet link tag for portal default custom css if given bool seq evals to true",
+        "description": "Generates stylesheet link tag for portal default custom css if given bool seq evals to true\n(no documented parameters)",
         "prefix": "~include_default_custom_css"
     },
     "include_javascript": {
         "name": "include_javascript",
         "body": "include_javascript",
-        "description": "Generates script include tag for specified template path",
+        "description": "Generates script include tag for specified template path\n Available Parameters: \n\t- path(String): ",
         "prefix": "~include_javascript"
     },
     "module_asset_url": {
         "name": "module_asset_url",
         "body": "module_asset_url(${name})",
-        "description": "Gets the URL for an asset attached to a module",
+        "description": "Gets the URL for an asset attached to a module\n Available Parameters: \n\t- name(String): The name of the asset",
         "prefix": "~module_asset_url"
     },
     "page_by_id": {
         "name": "page_by_id",
         "body": "page_by_id(${page_id})",
-        "description": "Returns a landing or website page by id",
+        "description": "Returns a landing or website page by id\n Available Parameters: \n\t- page_id(id): The id of the page to look up",
         "prefix": "~page_by_id"
     },
     "personalization_token": {
         "name": "personalization_token",
         "body": "personalization_token(${expression}, ${default})",
-        "description": "Returns the value of a contact or contact related property, or a default.",
+        "description": "Returns the value of a contact or contact related property, or a default.\n Available Parameters: \n\t- expression(string): An expression for the object and property to render\n\n\t- default(string): (Optional) A default value to use if the expression has no value",
         "prefix": "~personalization_token"
     },
     "postal_location": {
         "name": "postal_location",
         "body": "postal_location(${postal_code}, ${country_code})",
-        "description": "Returns the lat/lon location of a postal code",
+        "description": "Returns the lat/lon location of a postal code\n Available Parameters: \n\t- postal_code(string): postal code of the location\n\n\t- country_code(string): Country code for the postal code",
         "prefix": "~postal_location"
     },
     "range": {
         "name": "range",
         "body": "range",
-        "description": "<p>Return a list containing an arithmetic progression of integers.</p><p>With one parameter, range will return a list from 0 up to (but not including) the value.  With two parameters, the range will start at the first value and increment by 1 up to (but not including) the second value.  The third parameter specifies the step increment.</p> <p>All values can be negative. Impossible ranges will return an empty list.</p><p>Ranges can generate a maximum of 1000 values.</p>",
+        "description": "<p>Return a list containing an arithmetic progression of integers.</p><p>With one parameter, range will return a list from 0 up to (but not including) the value.  With two parameters, the range will start at the first value and increment by 1 up to (but not including) the second value.  The third parameter specifies the step increment.</p> <p>All values can be negative. Impossible ranges will return an empty list.</p><p>Ranges can generate a maximum of 1000 values.</p>\n Available Parameters: \n\t- start(number): \n\n\t- end(number): \n\n\t- step(number): ",
         "prefix": "~range"
     },
     "raw_theme_setting": {
         "name": "raw_theme_setting",
         "body": "raw_theme_setting(${dot_notated_full_field_name})",
-        "description": "Returns theme overridden settings parameters or default parameters by dot notation",
+        "description": "Returns theme overridden settings parameters or default parameters by dot notation\n Available Parameters: \n\t- dot_notated_full_field_name(String): Fully qualified field name using dot notation",
         "prefix": "~raw_theme_setting"
     },
     "require_css": {
         "name": "require_css",
         "body": "require_css",
-        "description": "Loads a css file to be output in the head",
+        "description": "Loads a css file to be output in the head\n Available Parameters: \n\t- url(String): ",
         "prefix": "~require_css"
     },
     "require_default_custom_css": {
         "name": "require_default_custom_css",
         "body": "require_default_custom_cssfalse",
-        "description": "Generates stylesheet link tag for portal default custom css if given bool seq evals to true",
+        "description": "Generates stylesheet link tag for portal default custom css if given bool seq evals to true\n(no documented parameters)",
         "prefix": "~require_default_custom_css"
     },
     "require_js": {
         "name": "require_js",
         "body": "require_js",
-        "description": "Enqueues a js file to be output in the head or footer",
+        "description": "Enqueues a js file to be output in the head or footer\n Available Parameters: \n\t- url(String): \n\n\t- position(String): ",
         "prefix": "~require_js"
     },
     "resize_image_url": {
         "name": "resize_image_url",
         "body": "resize_image_url(${url}, ${width}, ${height}, ${length}, ${upscale}, ${upsize})",
-        "description": "Rewrites the URL of an image in File Manager to a URL that will resize the image on request",
+        "description": "Rewrites the URL of an image in File Manager to a URL that will resize the image on request\n Available Parameters: \n\t- url(string): URL of a HubSpot-hosted image\n\n\t- width(number): the new image width, in pixels\n\n\t- height(number): the new image height, in pixels\n\n\t- length(number): the new length of the largest side, in pixels\n\n\t- upscale(boolean): use the resized image dimensions even if they would scale up the original image (images may appear blurry)\n\n\t- upsize(boolean): return the resized image even if it is larger than the original in bytes",
         "prefix": "~resize_image_url"
     },
     "script_embed": {
         "name": "script_embed",
         "body": "script_embed",
-        "description": "Defines an embeddable object which renders differently in the editor vs a live page",
+        "description": "Defines an embeddable object which renders differently in the editor vs a live page\n Available Parameters: \n\t- type(String): Type of embeddable object (wistia|embedly)\n\n\t- src(String): Object source\n\n\t- title(String): Object title\n\n\t- options(String): Options for particular type of embed\n\n\t- description(String): Description of embed for SEO purposes",
         "prefix": "~script_embed"
     },
     "strtotime": {
         "name": "strtotime",
         "body": "strtotime",
-        "description": "converts a string and datetime format into a datetime object",
+        "description": "converts a string and datetime format into a datetime object\n Available Parameters: \n\t- var(datetimeString): \n\n\t- var(datetimeFormat): ",
         "prefix": "~strtotime"
     },
     "super": {
         "name": "super",
         "body": "{% super \"super\" false %}\n\t\n\n{% endsuper%} ",
-        "description": "Only usable within blocks, will render the contents of the parent block by calling super.",
+        "description": "Only usable within blocks, will render the contents of the parent block by calling super.\n(no documented parameters)",
         "prefix": "~super"
     },
     "to_local_time": {
         "name": "to_local_time",
         "body": "to_local_time(${date})",
-        "description": "Converts a UNIX timestamp to a date in the portal's timezone",
+        "description": "Converts a UNIX timestamp to a date in the portal's timezone\n Available Parameters: \n\t- date(datetime): UNIX timestamp to convert to local time",
         "prefix": "~to_local_time"
     },
     "today": {
         "name": "today",
         "body": "today",
-        "description": "return datetime of beginning of the day",
+        "description": "return datetime of beginning of the day\n Available Parameters: \n\t- timezone(string): Optional timezone",
         "prefix": "~today"
     },
     "truncate": {
         "name": "truncate",
         "body": "truncate",
-        "description": "truncates a given string to a specified length",
+        "description": "truncates a given string to a specified length\n Available Parameters: \n\t- s(String): \n\n\t- length(number): \n\n\t- end(String): ",
         "prefix": "~truncate"
     },
     "type": {
         "name": "type",
         "body": "type",
-        "description": "",
+        "description": "\n(no documented parameters)",
         "prefix": "~type"
     },
     "unixtimestamp": {
         "name": "unixtimestamp",
         "body": "unixtimestamp",
-        "description": "gets the unix timestamp milliseconds value of a datetime",
+        "description": "gets the unix timestamp milliseconds value of a datetime\n Available Parameters: \n\t- var(date): ",
         "prefix": "~unixtimestamp"
     }
 }
