@@ -28,7 +28,7 @@ const writePrettySnippetJson = (filePath, snippetJson) => {
 const endBlocker = (name, label, params, contents='\n') => {
   return `{% ${name} "${label}" ${params} %}\n\t${contents}\n{% end${name.includes("_")
     ? '_' + name + '%}'
-		: name + '%}'} `;
+    : name + '%}'} `;
 }
 
 fetchData('https://api.hubspot.com/cos-rendering/v1/hubldoc')
@@ -42,23 +42,23 @@ fetchData('https://api.hubspot.com/cos-rendering/v1/hubldoc')
         const paramString = childEntry['params'].length > 0
           ? parentType === 'tags'
             ? '\n\t' + childEntry.params.map(param => `\${${param.name}}=\${${param.defaultValue.length
-							? param.defaultValue : 'NO_DEFAULT'}}`).join("\n\t")
-							: `(${childEntry.params.map((param, i) => "${" + param.name + "}").join(", ")})`
+              ? param.defaultValue : 'NO_DEFAULT'}}`).join("\n\t")
+              : `(${childEntry.params.map((param, i) => "${" + param.name + "}").join(", ")})`
           : false;
         const paramStringDesc = childEntry['params'].length > 0
-					? "\n Available Parameters: \n\t- " + childEntry.params
-						.map(param => `${param.name}(${param.type}): ${param.desc}`).join("\n\n\t- ")
-					: `\n(no documented parameters)`;
+          ? "\n Available Parameters: \n\t- " + childEntry.params
+            .map(param => `${param.name}(${param.type}): ${param.desc}`).join("\n\n\t- ")
+          : `\n(no documented parameters)`;
         output[parentType][childType] = {}; // I feel like I could use Object.assign() somewhere here to DRY this up.
-				output[parentType][childType]['name'] = childEntry.name;
-				if (parentType === 'expTests') {
-					output[parentType][childType]['body'] = childEntry.snippets.length > 0 ? childEntry.snippets[0].code	: childEntry.name				
-				} else {
-					output[parentType][childType]['body'] = childEntry.snippets.length > 0
-						? childEntry.snippets[0]['code'].includes('{% end')
-							? endBlocker(childEntry.name, childEntry.name, paramString) : childEntry.name + paramString
-						: childEntry.name
-				}
+        output[parentType][childType]['name'] = childEntry.name;
+        if (parentType === 'expTests') {
+          output[parentType][childType]['body'] = childEntry.snippets.length > 0 ? childEntry.snippets[0].code	: childEntry.name				
+        } else {
+          output[parentType][childType]['body'] = childEntry.snippets.length > 0
+            ? childEntry.snippets[0]['code'].includes('{% end')
+              ? endBlocker(childEntry.name, childEntry.name, paramString) : childEntry.name + paramString
+            : childEntry.name
+        }
         output[parentType][childType]['description'] = childEntry.desc + paramStringDesc;
         output[parentType][childType]['prefix'] = `${parentType == 'filters' ? "|" : "~"}` + childEntry.name
       })
